@@ -1,8 +1,10 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
-from __init__ import app
-db = SQLAlchemy(app)
-ma=Marshmallow(app)
+
+from __init__ import db
+from __init__ import ma
+#db = SQLAlchemy(app)
+#ma=Marshmallow(app)
 ###Models####
 class Product(db.Model):
     __tablename__ = "products"
