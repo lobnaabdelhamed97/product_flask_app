@@ -1,9 +1,7 @@
 FROM python:latest
 RUN apt-get update -y
 RUN apt-get install -y python3-pip python3-dev build-essential
-COPY . /newapp
-WORKDIR /newapp
+COPY . /flask-app
+WORKDIR /flask-app
 RUN pip install -r requirements.txt
-EXPOSE 5000
-ENTRYPOINT ["python3"]
-CMD ["python3", "D:\ventureappital\project\newapp\__main__.py"]
+CMD ["python3", "__main__.py"]
